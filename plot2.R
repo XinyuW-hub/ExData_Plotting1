@@ -12,7 +12,7 @@ selected <- subset(projectData, Date == "1/2/2007" | Date == "2/2/2007")
 #Create Date_Time column
 selected$Date_Time <- as.POSIXct(paste(selected$Date,selected$Time), format= "%d/%m/%Y %H:%M:%S")
 
-#create and export the first PNG plot
+#create and export the second PNG plot
 png("plot2.png", width = 480, height = 480)
 plot(selected$Date_Time, selected$Global_active_power, type = "l",
      xlab = "", ylab = "Global Active Power (kilowatts)")
